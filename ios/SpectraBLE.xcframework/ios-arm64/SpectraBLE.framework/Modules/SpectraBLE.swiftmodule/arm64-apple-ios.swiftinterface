@@ -1,0 +1,189 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SpectraBLE
+import CoreBluetooth
+import Foundation
+import Security
+@_exported import SpectraBLE
+import Swift
+import _Concurrency
+public struct HURequest {
+}
+public struct BLEDevice : Swift.Equatable {
+  public let peripheral: CoreBluetooth.CBPeripheral?
+  public let advertisementData: [Swift.String : Any]?
+  public let rssi: Swift.Int?
+  public var rssiHistory: [Swift.Int]
+  public var timestamp: Swift.Double
+  public var isConnected: Swift.Bool
+  public init(peripheral: CoreBluetooth.CBPeripheral?, advertisementData: [Swift.String : Any]? = nil, rssi: Swift.Int?, timestamp: Swift.Double, rssiHistory: [Swift.Int] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
+  public static func == (lhs: SpectraBLE.BLEDevice, rhs: SpectraBLE.BLEDevice) -> Swift.Bool
+  public var IsXPReader: Swift.Bool {
+    get
+  }
+  public var midPoint: Swift.Int? {
+    get
+  }
+  public var distance: Swift.Double {
+    get
+  }
+  public var manufactureData: Foundation.Data? {
+    get
+  }
+  public var manufDataString: Swift.String? {
+    get
+  }
+  public var deviceName: Swift.String? {
+    get
+  }
+  public var peripheralId: Swift.String? {
+    get
+  }
+  public var inOutFlag: Swift.String? {
+    get
+  }
+  public var deviceType: Swift.String? {
+    get
+  }
+  public var transactionLevel: Swift.Int? {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class SpectraBLE : ObjectiveC.NSObject {
+  public static let shared: SpectraBLE.SpectraBLE
+  @objc weak public var bleManagerDelegate: SpectraBLE.BleManagerDelegate?
+  @objc public var scannedDevices: Foundation.NSMutableArray
+  @objc deinit
+}
+extension SpectraBLE.SpectraBLE {
+  @objc dynamic public func initSdk(apiURL: Swift.String, apiKey: Swift.String)
+  @objc dynamic public func startScan()
+  @objc dynamic public func stopScan()
+  @objc dynamic public func makePunch(tagId: Swift.String, destinationFloor: Swift.Int, boardingFloor: Swift.Int, selectedFloor: Swift.Int, deviceUniqueId: Swift.String)
+  @objc dynamic public func getDeviceList()
+  @objc dynamic public func removeKeychain()
+}
+public enum DeviceType : Swift.String {
+  case XPReader
+  case XPReader2
+  case Biot
+  case Biostamp3s
+  case Biosrible3s
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct DeviceConstant {
+}
+public enum DeviceParameter : Swift.Int {
+  case XP_RSSI
+  case OTHER_RSSI
+  case XP_TAP_LOW
+  case XP_TAP_MED
+  case XP_TAP_HIGH
+  case OTHER_TAP_LOW
+  case OTHER_TAP_MED
+  case OTHER_TAP_HIGH
+  case XP_SHAKE_LOW
+  case XP_SHAKE_HIGH
+  case OTHER_SHAKE_LOW
+  case OTHER_SHAKE_HIGH
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum Command {
+  case punch
+  public static func == (a: SpectraBLE.Command, b: SpectraBLE.Command) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol BleManagerDelegate {
+  @objc func onInitSuccess(SuccessMsg: Swift.String)
+  @objc func onInitFailure(error: SpectraBLE.BleSdkError)
+  @objc func onScanSuccess(successMsg: Swift.String)
+  @objc func onScanFailure(error: SpectraBLE.BleSdkError)
+  @objc func onBleManagerSuccess(successMsg: Swift.String)
+  @objc func onBleManagerFailure(error: SpectraBLE.BleSdkError)
+  @objc func onCommandSendSuccess(successMsg: Swift.String)
+  @objc func onGetDeviceListSuccess(successMsg: Swift.String, deviceArray: Foundation.NSMutableArray)
+  @objc func onGetDeviceListFailure(error: SpectraBLE.BleSdkError)
+}
+public enum HUHttpMethods : Swift.String {
+  case get
+  case post
+  case put
+  case delete
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension SpectraBLE.SpectraBLE : CoreBluetooth.CBCentralManagerDelegate {
+  @objc dynamic public func centralManagerDidUpdateState(_ central: CoreBluetooth.CBCentralManager)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDiscover peripheral: CoreBluetooth.CBPeripheral, advertisementData: [Swift.String : Any], rssi RSSI: Foundation.NSNumber)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didConnect peripheral: CoreBluetooth.CBPeripheral)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didFailToConnect peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDisconnectPeripheral peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, connectionEventDidOccur event: CoreBluetooth.CBConnectionEvent, for peripheral: CoreBluetooth.CBPeripheral)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didUpdateANCSAuthorizationFor peripheral: CoreBluetooth.CBPeripheral)
+}
+extension SpectraBLE.SpectraBLE : CoreBluetooth.CBPeripheralDelegate {
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor descriptor: CoreBluetooth.CBDescriptor, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateNotificationStateFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+}
+extension SpectraBLE.SpectraBLE : CoreBluetooth.CBPeripheralManagerDelegate {
+  @objc dynamic public func peripheralManagerDidUpdateState(_ peripheral: CoreBluetooth.CBPeripheralManager)
+  @objc dynamic public func peripheralManager(_ peripheral: CoreBluetooth.CBPeripheralManager, didReceiveRead request: CoreBluetooth.CBATTRequest)
+  @objc dynamic public func peripheralManager(_ peripheral: CoreBluetooth.CBPeripheralManager, didReceiveWrite requests: [CoreBluetooth.CBATTRequest])
+}
+@_hasMissingDesignatedInitializers @objc public class BleSdkError : ObjectiveC.NSObject {
+  @objc final public let errorCode: Swift.Int
+  @objc final public let errorMessage: Swift.String
+  @objc deinit
+}
+public struct BLEErrorDesc {
+}
+public struct BLEFailureMessage {
+}
+public struct BLESuccessMessage {
+}
+extension SpectraBLE.SpectraBLE {
+  public var state: CoreBluetooth.CBManagerState {
+    get
+  }
+  public var error: SpectraBLE.BleSdkError? {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class HttpUtility {
+  public static let shared: SpectraBLE.HttpUtility
+  public var authenticationToken: Swift.String?
+  public var customJsonDecoder: Foundation.JSONDecoder?
+  public func reqeuest<T>(huRequest: SpectraBLE.HURequest, resultType: T.Type, completionHandler: @escaping (Swift.Result<T?, SpectraBLE.HUNetworkError>) -> Swift.Void) where T : Swift.Decodable
+  @objc deinit
+}
+public struct HUNetworkError : Swift.Error {
+}
+extension SpectraBLE.DeviceType : Swift.Equatable {}
+extension SpectraBLE.DeviceType : Swift.Hashable {}
+extension SpectraBLE.DeviceType : Swift.RawRepresentable {}
+extension SpectraBLE.DeviceParameter : Swift.Equatable {}
+extension SpectraBLE.DeviceParameter : Swift.Hashable {}
+extension SpectraBLE.DeviceParameter : Swift.RawRepresentable {}
+extension SpectraBLE.Command : Swift.Equatable {}
+extension SpectraBLE.Command : Swift.Hashable {}
+extension SpectraBLE.HUHttpMethods : Swift.Equatable {}
+extension SpectraBLE.HUHttpMethods : Swift.Hashable {}
+extension SpectraBLE.HUHttpMethods : Swift.RawRepresentable {}

@@ -1,0 +1,11 @@
+framework module SpectraBLE {
+  umbrella header "SpectraBLE.h"
+
+  export *
+  module * { export * }
+}
+
+module SpectraBLE.Swift {
+    header "SpectraBLE-Swift.h"
+    requires objc
+}
