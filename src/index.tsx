@@ -6,7 +6,7 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo managed workflow\n';
 
-const SpectrableModule = NativeModules.SpectrableModule
+export const SpectrableModule = NativeModules.SpectrableModule
   ? NativeModules.SpectrableModule
   : new Proxy(
       {},
@@ -16,7 +16,3 @@ const SpectrableModule = NativeModules.SpectrableModule
         },
       }
     );
-
-export function multiply(a: number, b: number): Promise<number> {
-  return SpectrableModule.multiply(a, b);
-}
