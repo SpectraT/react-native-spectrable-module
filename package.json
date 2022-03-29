@@ -1,6 +1,6 @@
 {
   "name": "react-native-spectrable-module",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "ble",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -36,13 +36,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/HardikDhanani/react-native-spectrable-module",
-  "author": "Hardik Dhanani <dhananihardik.nl@gmail.com> (https://github.com/HardikDhanani)",
+  "repository": "https://github.com/SpectraT/react-native-spectrable-module",
+  "author": "SpectraT <it.spectraho@gmail.com> (https://github.com/SpectraT)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HardikDhanani/react-native-spectrable-module/issues"
+    "url": "https://github.com/SpectraT/react-native-spectrable-module/issues"
   },
-  "homepage": "https://github.com/HardikDhanani/react-native-spectrable-module#readme",
+  "homepage": "https://github.com/SpectraT/react-native-spectrable-module#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
