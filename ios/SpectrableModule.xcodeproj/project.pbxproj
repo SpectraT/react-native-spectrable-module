@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520CF40227F2C374001C2AF3 /* SpectraBLE.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CF40127F2C374001C2AF3 /* SpectraBLE.xcframework */; };
 		523D65DD27F217DA00A79E70 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D65DC27F217DA00A79E70 /* dummy.swift */; };
-		523D661027F2182600A79E70 /* SpectraBLE.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523D660F27F2182600A79E70 /* SpectraBLE.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,9 +25,9 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libSpectrableModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpectrableModule.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		520CF40127F2C374001C2AF3 /* SpectraBLE.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SpectraBLE.xcframework; sourceTree = "<group>"; };
 		523D65DB27F217DA00A79E70 /* SpectrableModule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpectrableModule-Bridging-Header.h"; sourceTree = "<group>"; };
 		523D65DC27F217DA00A79E70 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
-		523D660F27F2182600A79E70 /* SpectraBLE.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SpectraBLE.xcframework; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* SpectrableModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpectrableModule.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* SpectrableModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpectrableModule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				523D661027F2182600A79E70 /* SpectraBLE.xcframework in Frameworks */,
+				520CF40227F2C374001C2AF3 /* SpectraBLE.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +62,7 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				523D660F27F2182600A79E70 /* SpectraBLE.xcframework */,
+				520CF40127F2C374001C2AF3 /* SpectraBLE.xcframework */,
 				523D65DC27F217DA00A79E70 /* dummy.swift */,
 				B3E7B5881CC2AC0600A0062D /* SpectrableModule.h */,
 				B3E7B5891CC2AC0600A0062D /* SpectrableModule.m */,
