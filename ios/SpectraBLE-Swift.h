@@ -212,6 +212,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @class NSString;
 @class BleSdkError;
+@class NSMutableArray;
 
 SWIFT_PROTOCOL("_TtP10SpectraBLE18BleManagerDelegate_")
 @protocol BleManagerDelegate
@@ -219,14 +220,19 @@ SWIFT_PROTOCOL("_TtP10SpectraBLE18BleManagerDelegate_")
 - (void)onInitFailureWithError:(BleSdkError * _Nonnull)error;
 - (void)onScanSuccessWithSuccessMsg:(NSString * _Nonnull)successMsg;
 - (void)onScanFailureWithError:(BleSdkError * _Nonnull)error;
-- (void)onCommandSendSuccessWithSuccessMsg:(NSString * _Nonnull)successMsg;
-- (void)onBleManagerFailureWithError:(BleSdkError * _Nonnull)error;
 - (void)onBleManagerSuccessWithSuccessMsg:(NSString * _Nonnull)successMsg;
+- (void)onBleManagerFailureWithError:(BleSdkError * _Nonnull)error;
+- (void)onCommandSendSuccessWithSuccessMsg:(NSString * _Nonnull)successMsg;
+- (void)onGetDeviceListSuccessWithSuccessMsg:(NSString * _Nonnull)successMsg deviceArray:(NSMutableArray * _Nonnull)deviceArray;
+- (void)onGetDeviceListFailureWithError:(BleSdkError * _Nonnull)error;
 @end
 
+@class NSNumber;
 
 SWIFT_CLASS("_TtC10SpectraBLE11BleSdkError")
 @interface BleSdkError : NSObject
+@property (nonatomic, readonly) NSInteger errorCode;
+@property (nonatomic, readonly, copy) NSString * _Nonnull errorMessage;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -237,6 +243,7 @@ SWIFT_CLASS("_TtC10SpectraBLE10SpectraBLE")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @property (nonatomic, weak) id <BleManagerDelegate> _Nullable bleManagerDelegate;
+@property (nonatomic, strong) NSMutableArray * _Nonnull scannedDevices;
 @end
 
 
@@ -251,13 +258,15 @@ SWIFT_CLASS("_TtC10SpectraBLE10SpectraBLE")
 @end
 
 
+
 @interface SpectraBLE (SWIFT_EXTENSION(SpectraBLE))
 - (void)initSdkWithApiURL:(NSString * _Nonnull)apiURL apiKey:(NSString * _Nonnull)apiKey SWIFT_METHOD_FAMILY(none);
 - (void)startScan;
 - (void)stopScan;
-- (void)makePunchWithTagId:(NSString * _Nonnull)tagId destinationFloor:(NSString * _Nonnull)destinationFloor boardingFloor:(NSString * _Nonnull)boardingFloor selectedFloor:(NSString * _Nonnull)selectedFloor;
+- (void)makePunchWithTagId:(NSString * _Nonnull)tagId destinationFloor:(NSInteger)destinationFloor boardingFloor:(NSInteger)boardingFloor selectedFloor:(NSInteger)selectedFloor deviceUniqueId:(NSString * _Nonnull)deviceUniqueId;
+- (void)getDeviceList;
+- (void)removeKeychain;
 @end
-
 
 @class CBPeripheral;
 @class CBService;
@@ -274,7 +283,6 @@ SWIFT_CLASS("_TtC10SpectraBLE10SpectraBLE")
 @end
 
 @class CBCentralManager;
-@class NSNumber;
 
 @interface SpectraBLE (SWIFT_EXTENSION(SpectraBLE)) <CBCentralManagerDelegate>
 - (void)centralManagerDidUpdateState:(CBCentralManager * _Nonnull)central;
@@ -505,6 +513,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @class NSString;
 @class BleSdkError;
+@class NSMutableArray;
 
 SWIFT_PROTOCOL("_TtP10SpectraBLE18BleManagerDelegate_")
 @protocol BleManagerDelegate
@@ -512,14 +521,19 @@ SWIFT_PROTOCOL("_TtP10SpectraBLE18BleManagerDelegate_")
 - (void)onInitFailureWithError:(BleSdkError * _Nonnull)error;
 - (void)onScanSuccessWithSuccessMsg:(NSString * _Nonnull)successMsg;
 - (void)onScanFailureWithError:(BleSdkError * _Nonnull)error;
-- (void)onCommandSendSuccessWithSuccessMsg:(NSString * _Nonnull)successMsg;
-- (void)onBleManagerFailureWithError:(BleSdkError * _Nonnull)error;
 - (void)onBleManagerSuccessWithSuccessMsg:(NSString * _Nonnull)successMsg;
+- (void)onBleManagerFailureWithError:(BleSdkError * _Nonnull)error;
+- (void)onCommandSendSuccessWithSuccessMsg:(NSString * _Nonnull)successMsg;
+- (void)onGetDeviceListSuccessWithSuccessMsg:(NSString * _Nonnull)successMsg deviceArray:(NSMutableArray * _Nonnull)deviceArray;
+- (void)onGetDeviceListFailureWithError:(BleSdkError * _Nonnull)error;
 @end
 
+@class NSNumber;
 
 SWIFT_CLASS("_TtC10SpectraBLE11BleSdkError")
 @interface BleSdkError : NSObject
+@property (nonatomic, readonly) NSInteger errorCode;
+@property (nonatomic, readonly, copy) NSString * _Nonnull errorMessage;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -530,6 +544,7 @@ SWIFT_CLASS("_TtC10SpectraBLE10SpectraBLE")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @property (nonatomic, weak) id <BleManagerDelegate> _Nullable bleManagerDelegate;
+@property (nonatomic, strong) NSMutableArray * _Nonnull scannedDevices;
 @end
 
 
@@ -544,13 +559,15 @@ SWIFT_CLASS("_TtC10SpectraBLE10SpectraBLE")
 @end
 
 
+
 @interface SpectraBLE (SWIFT_EXTENSION(SpectraBLE))
 - (void)initSdkWithApiURL:(NSString * _Nonnull)apiURL apiKey:(NSString * _Nonnull)apiKey SWIFT_METHOD_FAMILY(none);
 - (void)startScan;
 - (void)stopScan;
-- (void)makePunchWithTagId:(NSString * _Nonnull)tagId destinationFloor:(NSString * _Nonnull)destinationFloor boardingFloor:(NSString * _Nonnull)boardingFloor selectedFloor:(NSString * _Nonnull)selectedFloor;
+- (void)makePunchWithTagId:(NSString * _Nonnull)tagId destinationFloor:(NSInteger)destinationFloor boardingFloor:(NSInteger)boardingFloor selectedFloor:(NSInteger)selectedFloor deviceUniqueId:(NSString * _Nonnull)deviceUniqueId;
+- (void)getDeviceList;
+- (void)removeKeychain;
 @end
-
 
 @class CBPeripheral;
 @class CBService;
@@ -567,7 +584,6 @@ SWIFT_CLASS("_TtC10SpectraBLE10SpectraBLE")
 @end
 
 @class CBCentralManager;
-@class NSNumber;
 
 @interface SpectraBLE (SWIFT_EXTENSION(SpectraBLE)) <CBCentralManagerDelegate>
 - (void)centralManagerDidUpdateState:(CBCentralManager * _Nonnull)central;
