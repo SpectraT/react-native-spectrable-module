@@ -1,6 +1,6 @@
 {
   "name": "react-native-spectrable-module",
-  "version": "0.1.68",
+  "version": "0.1.70",
   "description": "ble",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
