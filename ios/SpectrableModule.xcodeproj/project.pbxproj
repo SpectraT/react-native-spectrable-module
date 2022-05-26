@@ -3,12 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		520CF40227F2C374001C2AF3 /* SpectraBLE.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520CF40127F2C374001C2AF3 /* SpectraBLE.xcframework */; };
 		523D65DD27F217DA00A79E70 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D65DC27F217DA00A79E70 /* dummy.swift */; };
+		AF72F1F0282A744E00BDF57A /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72F1EB282A744E00BDF57A /* HttpUtility.swift */; };
+		AF72F1F1282A744E00BDF57A /* HUHttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72F1EC282A744E00BDF57A /* HUHttpMethods.swift */; };
+		AF72F1F2282A744E00BDF57A /* HURequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72F1ED282A744E00BDF57A /* HURequest.swift */; };
+		AF72F1F3282A744E00BDF57A /* HUNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72F1EE282A744E00BDF57A /* HUNetworkError.swift */; };
+		AF72F1F4282A744E00BDF57A /* MDLInitApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72F1EF282A744E00BDF57A /* MDLInitApi.swift */; };
+		AF72F207282A745500BDF57A /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = AF72F1F6282A745500BDF57A /* NSData+AES256.m */; };
+		AF72F208282A745500BDF57A /* BLEEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = AF72F1F9282A745500BDF57A /* BLEEncryption.m */; };
+		AF72F209282A745500BDF57A /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72F1FB282A745500BDF57A /* KeychainHelper.swift */; };
+		AF72F20A282A745500BDF57A /* BLE+MainMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72F1FD282A745500BDF57A /* BLE+MainMethods.swift */; };
+		AF72F20B282A745500BDF57A /* BLE+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72F1FE282A745500BDF57A /* BLE+Constants.swift */; };
+		AF72F20C282A745500BDF57A /* BLE+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72F1FF282A745500BDF57A /* BLE+Errors.swift */; };
+		AF72F20D282A745500BDF57A /* BLE+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72F200282A745500BDF57A /* BLE+Extensions.swift */; };
+		AF72F20E282A745500BDF57A /* BLEManager+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72F201282A745500BDF57A /* BLEManager+Protocol.swift */; };
+		AF72F20F282A745500BDF57A /* BLESdkSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72F202282A745500BDF57A /* BLESdkSwift.swift */; };
+		AF72F210282A745500BDF57A /* BLE+Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72F203282A745500BDF57A /* BLE+Command.swift */; };
+		AF72F211282A745500BDF57A /* BLE+Scanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72F204282A745500BDF57A /* BLE+Scanning.swift */; };
+		AF72F212282A745500BDF57A /* BLE+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72F205282A745500BDF57A /* BLE+Delegates.swift */; };
+		AF72F213282A745500BDF57A /* BLEDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72F206282A745500BDF57A /* BLEDevice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,9 +42,29 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libSpectrableModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpectrableModule.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		520CF40127F2C374001C2AF3 /* SpectraBLE.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SpectraBLE.xcframework; sourceTree = "<group>"; };
 		523D65DB27F217DA00A79E70 /* SpectrableModule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpectrableModule-Bridging-Header.h"; sourceTree = "<group>"; };
 		523D65DC27F217DA00A79E70 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
+		AF2D6FC3283D144800C84BE6 /* SpectraBLE-Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SpectraBLE-Swift.h"; sourceTree = "<group>"; };
+		AF72F1EB282A744E00BDF57A /* HttpUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
+		AF72F1EC282A744E00BDF57A /* HUHttpMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUHttpMethods.swift; sourceTree = "<group>"; };
+		AF72F1ED282A744E00BDF57A /* HURequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HURequest.swift; sourceTree = "<group>"; };
+		AF72F1EE282A744E00BDF57A /* HUNetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUNetworkError.swift; sourceTree = "<group>"; };
+		AF72F1EF282A744E00BDF57A /* MDLInitApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDLInitApi.swift; sourceTree = "<group>"; };
+		AF72F1F6282A745500BDF57A /* NSData+AES256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES256.m"; sourceTree = "<group>"; };
+		AF72F1F7282A745500BDF57A /* BLEEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEEncryption.h; sourceTree = "<group>"; };
+		AF72F1F8282A745500BDF57A /* NSData+AES256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES256.h"; sourceTree = "<group>"; };
+		AF72F1F9282A745500BDF57A /* BLEEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEEncryption.m; sourceTree = "<group>"; };
+		AF72F1FB282A745500BDF57A /* KeychainHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		AF72F1FD282A745500BDF57A /* BLE+MainMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BLE+MainMethods.swift"; sourceTree = "<group>"; };
+		AF72F1FE282A745500BDF57A /* BLE+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BLE+Constants.swift"; sourceTree = "<group>"; };
+		AF72F1FF282A745500BDF57A /* BLE+Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BLE+Errors.swift"; sourceTree = "<group>"; };
+		AF72F200282A745500BDF57A /* BLE+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BLE+Extensions.swift"; sourceTree = "<group>"; };
+		AF72F201282A745500BDF57A /* BLEManager+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BLEManager+Protocol.swift"; sourceTree = "<group>"; };
+		AF72F202282A745500BDF57A /* BLESdkSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLESdkSwift.swift; sourceTree = "<group>"; };
+		AF72F203282A745500BDF57A /* BLE+Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BLE+Command.swift"; sourceTree = "<group>"; };
+		AF72F204282A745500BDF57A /* BLE+Scanning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BLE+Scanning.swift"; sourceTree = "<group>"; };
+		AF72F205282A745500BDF57A /* BLE+Delegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BLE+Delegates.swift"; sourceTree = "<group>"; };
+		AF72F206282A745500BDF57A /* BLEDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEDevice.swift; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* SpectrableModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpectrableModule.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* SpectrableModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpectrableModule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,7 +74,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				520CF40227F2C374001C2AF3 /* SpectraBLE.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,14 +98,66 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				520CF40127F2C374001C2AF3 /* SpectraBLE.xcframework */,
+				AF72F1FC282A745500BDF57A /* BLE */,
+				AF72F1F5282A745500BDF57A /* Encryption */,
+				AF72F1FA282A745500BDF57A /* KeyChainWrapper */,
+				AF72F1EA282A744E00BDF57A /* APIUtility */,
 				523D65DC27F217DA00A79E70 /* dummy.swift */,
 				B3E7B5881CC2AC0600A0062D /* SpectrableModule.h */,
 				B3E7B5891CC2AC0600A0062D /* SpectrableModule.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				523D65DB27F217DA00A79E70 /* SpectrableModule-Bridging-Header.h */,
+				AF2D6FC3283D144800C84BE6 /* SpectraBLE-Swift.h */,
 				52D4E54E27F2B21F00AB8EC5 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		AF72F1EA282A744E00BDF57A /* APIUtility */ = {
+			isa = PBXGroup;
+			children = (
+				AF72F1EB282A744E00BDF57A /* HttpUtility.swift */,
+				AF72F1EC282A744E00BDF57A /* HUHttpMethods.swift */,
+				AF72F1ED282A744E00BDF57A /* HURequest.swift */,
+				AF72F1EE282A744E00BDF57A /* HUNetworkError.swift */,
+				AF72F1EF282A744E00BDF57A /* MDLInitApi.swift */,
+			);
+			path = APIUtility;
+			sourceTree = "<group>";
+		};
+		AF72F1F5282A745500BDF57A /* Encryption */ = {
+			isa = PBXGroup;
+			children = (
+				AF72F1F6282A745500BDF57A /* NSData+AES256.m */,
+				AF72F1F8282A745500BDF57A /* NSData+AES256.h */,
+				AF72F1F7282A745500BDF57A /* BLEEncryption.h */,
+				AF72F1F9282A745500BDF57A /* BLEEncryption.m */,
+			);
+			path = Encryption;
+			sourceTree = "<group>";
+		};
+		AF72F1FA282A745500BDF57A /* KeyChainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				AF72F1FB282A745500BDF57A /* KeychainHelper.swift */,
+			);
+			path = KeyChainWrapper;
+			sourceTree = "<group>";
+		};
+		AF72F1FC282A745500BDF57A /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				AF72F1FD282A745500BDF57A /* BLE+MainMethods.swift */,
+				AF72F1FE282A745500BDF57A /* BLE+Constants.swift */,
+				AF72F1FF282A745500BDF57A /* BLE+Errors.swift */,
+				AF72F200282A745500BDF57A /* BLE+Extensions.swift */,
+				AF72F201282A745500BDF57A /* BLEManager+Protocol.swift */,
+				AF72F202282A745500BDF57A /* BLESdkSwift.swift */,
+				AF72F203282A745500BDF57A /* BLE+Command.swift */,
+				AF72F204282A745500BDF57A /* BLE+Scanning.swift */,
+				AF72F205282A745500BDF57A /* BLE+Delegates.swift */,
+				AF72F206282A745500BDF57A /* BLEDevice.swift */,
+			);
+			path = BLE;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +218,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF72F211282A745500BDF57A /* BLE+Scanning.swift in Sources */,
+				AF72F208282A745500BDF57A /* BLEEncryption.m in Sources */,
+				AF72F20B282A745500BDF57A /* BLE+Constants.swift in Sources */,
+				AF72F20F282A745500BDF57A /* BLESdkSwift.swift in Sources */,
+				AF72F1F2282A744E00BDF57A /* HURequest.swift in Sources */,
+				AF72F1F0282A744E00BDF57A /* HttpUtility.swift in Sources */,
+				AF72F213282A745500BDF57A /* BLEDevice.swift in Sources */,
+				AF72F1F1282A744E00BDF57A /* HUHttpMethods.swift in Sources */,
+				AF72F209282A745500BDF57A /* KeychainHelper.swift in Sources */,
+				AF72F20C282A745500BDF57A /* BLE+Errors.swift in Sources */,
+				AF72F20A282A745500BDF57A /* BLE+MainMethods.swift in Sources */,
+				AF72F210282A745500BDF57A /* BLE+Command.swift in Sources */,
 				523D65DD27F217DA00A79E70 /* dummy.swift in Sources */,
+				AF72F20E282A745500BDF57A /* BLEManager+Protocol.swift in Sources */,
+				AF72F1F4282A744E00BDF57A /* MDLInitApi.swift in Sources */,
+				AF72F207282A745500BDF57A /* NSData+AES256.m in Sources */,
+				AF72F20D282A745500BDF57A /* BLE+Extensions.swift in Sources */,
+				AF72F212282A745500BDF57A /* BLE+Delegates.swift in Sources */,
+				AF72F1F3282A744E00BDF57A /* HUNetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -223,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -240,11 +346,7 @@
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SpectraBLE.xcframework\"",
@@ -268,11 +370,7 @@
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 				);
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SpectraBLE.xcframework\"",

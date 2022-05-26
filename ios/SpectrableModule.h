@@ -2,7 +2,6 @@
 #import <React/RCTEventEmitter.h>
 #import <React/RCTLog.h>
 
-#import <SpectraBLE/SpectraBLE-Swift.h>
 
 @interface SpectrableModule : RCTEventEmitter <RCTBridgeModule, BleManagerDelegate>
 
